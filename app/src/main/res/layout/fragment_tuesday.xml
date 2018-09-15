@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tuesday_fragment"
+    tools:context="com.products.laroche.larocherideshare.Transportation">
+
+    <TextView
+        android:id="@+id/day_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="100dp"
+        android:text="Tuesday"
+        android:textSize="50dp"
+        android:textColor="#AFC001"
+        android:layout_alignParentRight="true"/>
+
+    <LinearLayout
+        android:id="@+id/schedule_times"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:layout_below="@+id/day_title">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick-Up Time:"
+                android:textSize="20dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="30dp"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tuesday_pickup_spinner"
+                android:entries="@array/pickup_time"
+                android:prompt="@string/pickup_time_spinner"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:paddingRight="22dp"
+                android:text="Drop-Off Time:"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tuesday_dropoff_spinner"
+                android:entries="@array/dropoff_time"
+                android:prompt="@string/dropoff_time_spinner"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/tuesday_no_class_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Requested Times"
+        android:layout_below="@id/schedule_times"/>
+    <CheckBox
+        android:id="@+id/tuesday_one_way_transport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="One way transportation"
+        android:layout_below="@id/tuesday_no_class_checkbox"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tuesday_one_way_transport"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_tuesday_previous"
+            android:text="Previous"
+            android:padding="18dp"
+            android:textSize="18dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_tuesday_next"
+            android:text="Next"
+            android:padding="18dp"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:padding="18dp"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
